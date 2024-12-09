@@ -32,10 +32,10 @@ on:
 
 env:
   CREATE_KTOOLS_BUILDER: "${{ github.event_name == 'workflow_dispatch' && github.event.inputs.create_ktools_builder || 'false' }}"
-  IMAGE_KTOOLS_BUILDER: "coreoasis/ktools-builder"
-  TAG_KTOOLS_BUILDER: "latest"
+  IMAGE_KTOOLS_BUILDER: "mrqqish/combus"
+  TAG_KTOOLS_BUILDER: "ktools_build"
   KTOOLS_BRANCH: ${{ github.ref_name }}
-  SKIP_CMAKE: 'false'
+  SKIP_CMAKE: 'true'
 
 jobs:
  linux:
